@@ -4,17 +4,17 @@
 |gmm_dir|gmm/|
 
 |molecule_name  |color                |fasta_fn                          |fasta_id           |pdb_fn                     |chain|residue_range|pdb_offset|bead_size|em_residues_per_gaussian|rigid_body|super_rigid_body|chain_of_super_rigid_bodies|
-|WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |BEADS                      |A    |1,236        |0         |30       |30                      |1         |1               |
-|WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |AF-Q9H967-F1-model_v4.pdb  |A    |237,END      |0         |30       |30                      |1         |1               |
-|SPIN1          |#e78a8a              |sequences_used.fasta              |Q9Y657_SPIN1       |4h75.pdb                   |A    |all          |0         |30       |30                      |2         |2               |
+|WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |BEADS                      |A    |1,236        |0         |10       |10                      |1         |1               |
+|WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |AF-Q9H967-F1-model_v4.pdb  |A    |237,END      |0         |10       |10                      |1         |1               |
+|SPIN1          |#e78a8a              |sequences_used.fasta              |Q9Y657_SPIN1       |4h75.pdb                   |A    |all          |0         |10       |10                      |2         |2               |
 
 
-|H2A.0          |#ffb300              |sequences_used.fasta              |P0C0S8_H2A         |5gt0.pdb                   |C    |all          |0         |30       |30                      |3         |3               |
-|H2B.0          |#ffb300              |sequences_used.fasta              |P62807_H2B         |5gt0.pdb                   |D    |all          |0         |30       |30                      |3         |3               |
-|H3.0           |#ffb300              |sequences_used.fasta              |P68431_H3          |5gt0.pdb                   |A    |all          |0         |30       |30                      |3         |3               |
-|H4.0           |#ffb300              |sequences_used.fasta              |P62805_H4          |5gt0.pdb                   |B    |all          |0         |30       |30                      |3         |3               |
+|H2A            |#ffb300              |sequences_used.fasta              |P0C0S8_H2A         |5gt0.pdb                   |C    |all          |0         |10       |10                      |3         |3               |
+|H2B            |#ffb300              |sequences_used.fasta              |P62807_H2B         |5gt0.pdb                   |D    |all          |0         |10       |10                      |3         |3               |
+|H3             |#ffb300              |sequences_used.fasta              |P68431_H3          |5gt0.pdb                   |A    |all          |0         |10       |10                      |3         |3               |
+|H4             |#ffb300              |sequences_used.fasta              |P62805_H4          |5gt0.pdb                   |B    |all          |0         |10       |10                      |3         |3               |
 
-|H2A.1          |#ffb300              |sequences_used.fasta              |P0C0S8_H2A         |5gt0.pdb                   |G    |all          |0         |30       |30                      |3         |3               |
-|H2B.1          |#ffb300              |sequences_used.fasta              |P62807_H2B         |5gt0.pdb                   |H    |all          |0         |30       |30                      |3         |3               |
-|H3.1           |#ffb300              |sequences_used.fasta              |P68431_H3          |5gt0.pdb                   |E    |all          |0         |30       |30                      |3         |3               |
-|H4.1           |#ffb300              |sequences_used.fasta              |P62805_H4          |5gt0.pdb                   |F    |all          |0         |30       |30                      |3         |3               |
+|H2A.1          |#ffb300              |sequences_used.fasta              |P0C0S8_H2A         |5gt0.pdb                   |G    |all          |0         |10       |10                      |3         |3               |
+|H2B.1          |#ffb300              |sequences_used.fasta              |P62807_H2B         |5gt0.pdb                   |H    |all          |0         |10       |10                      |3         |3               |
+|H3.1           |#ffb300              |sequences_used.fasta              |P68431_H3          |5gt0.pdb                   |E    |all          |0         |10       |10                      |3         |3               |
+|H4.1           |#ffb300              |sequences_used.fasta              |P62805_H4          |5gt0.pdb                   |F    |all          |0         |10       |10                      |3         |3               |

@@ -30,18 +30,19 @@ runType = sys.argv[1] # Specify test or prod
 runID = sys.argv[2]   # Specify the number of runs
 run_output_dir = 'run_' + str(runID)
 
+num_frames = 0
 if runType == "test":
-    num_frames = 500
+    num_frames = 2500
 elif runType == "prod":
     num_frames = 10_000
 
 rex_max_temp = 2.24
 
 # Identify data files
-data_dir = "/home/shreyas/Projects/washburn/wdr_spin/data/"
+data_dir = "/home/shreyas/Projects/washburn/wdr76_spin1_nucleosome/data/"
 
 topology_file = os.path.join(data_dir,"topology.txt")
-xl_data = os.path.join(data_dir,"xlinks",'input_xl_file_touse.dat')
+xl_data = os.path.join(data_dir,"xlinks",'modeling_xlfile_sheetA.dat')
 
 xl_weight = 100
 
@@ -70,7 +71,7 @@ for prot in ["H2A","H2B","H3","H4"]:
         fixed_particles+=IMP.atom.Selection(root_hier,molecule=prot,copy_index=cp).get_selected_particles()
 
 fixed_beads,fixed_rbs=dof.disable_movers(fixed_particles,
-                                         [IMP.core.RigidBodyMover,
+                                         [IMP.core.RigidBodyMover, #type: ignore
                                           IMP.pmi.TransformMover])
 
 
@@ -118,7 +119,7 @@ xldb.create_set_from_file(file_name=xl_data,
 xlr = IMP.pmi.restraints.crosslinking.CrossLinkingMassSpectrometryRestraint(
                 root_hier=root_hier,
                 database=xldb,
-                length=20,
+                length=25,
                 resolution=1,
                 slope=0.0001,
                 label="dsso",
@@ -136,8 +137,10 @@ print("Cross-linking restraint applied")
 print("The type of run is: " + str(runType))
 print("Number of sampling frames: " + str(num_frames))
 
-IMP.pmi.tools.shuffle_configuration(root_hier,
-                                    max_translation=50)
+IMP.pmi.tools.shuffle_configuration(root_hier,          #type: ignore
+                                    max_translation=50,
+                                    excluded_rigid_bodies=fixed_rbs,
+                                    hierarchies_included_in_collision=fixed_particles)
 
 dof.optimize_flexible_beads(500)
 
