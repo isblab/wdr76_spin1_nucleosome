@@ -33,9 +33,9 @@ num_frames = 0
 if runType == "test":
     num_frames = 2500
 elif runType == "prod":
-    num_frames = 10_000
+    num_frames = 15_000
 
-rex_max_temp = 2.24
+rex_max_temp = 2.0
 
 # Identify data files
 data_dir = "/home/shreyas/Projects/washburn/wdr76_spin1_nucleosome/data/"
@@ -44,7 +44,7 @@ topology_file = os.path.join(data_dir, "topology.txt")
 xl_data_set1 = os.path.join(data_dir, "xlinks", "modeling_xlfile_sheetA.dat")
 xl_data_set2 = os.path.join(data_dir, "xlinks", "modeling_xlfile_sheetD.dat")
 
-xl_weight = 100
+xl_weight = 10
 
 # Actual modeling begins here
 mdl = IMP.Model()
