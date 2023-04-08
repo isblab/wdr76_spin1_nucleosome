@@ -4,7 +4,7 @@
 |gmm_dir|gmm/|
 
 |molecule_name  |color                |fasta_fn                          |fasta_id           |pdb_fn                     |chain|residue_range|pdb_offset|bead_size|em_residues_per_gaussian|rigid_body|super_rigid_body|chain_of_super_rigid_bodies|
-|WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |BEADS                      |A    |1,236        |0         |10       |10                      |1         |1               |
+|WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |BEADS                      |A    |1,236        |0         |20       |20                      |1         |1               |
 |WDR76          |#00a2ff              |sequences_used.fasta              |Q9H967_WDR76       |AF-Q9H967-F1-model_v4.pdb  |A    |237,END      |0         |10       |10                      |1         |1               |
 |SPIN1          |#e78a8a              |sequences_used.fasta              |Q9Y657_SPIN1       |4h75.pdb                   |A    |all          |0         |10       |10                      |2         |2               |
 
