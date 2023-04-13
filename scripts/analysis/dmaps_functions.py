@@ -7,6 +7,14 @@ from tqdm import tqdm
 import concurrent.futures
 
 
+def get_nmodels_in_A(ta_file):
+    with open(ta_file, "r") as taf:
+        ln_count = 0
+        for ln in taf.readlines():
+            ln_count += 1
+    return ln_count
+
+
 def get_bead_name(particle):
     """
     Input: particle
@@ -159,30 +167,14 @@ def get_mean_bead_distances_for_two_proteins(
 
     distances = np.ones(shape=(s1 + 1, s2 + 1, len(sample_models)))
     mean_distances = np.ones(shape=(s1 + 1, s2 + 1))
+    distances_in_frame = np.zeros(shape=(s1 + 1, s2 + 1))
 
-    with concurrent.futures.ThreadPoolExecutor(4) as executor:
-        l = len(sample_models)
-        for frame_id, distances_in_frame in executor.map(
-            measure_beadwise_distances,
-            list([p1] * l),
-            list([p2] * l),
-            list([s1] * l),
-            list([s2] * l),
-            list([rmf_file_handle] * l),
-            sample_models,
-            list([mdl] * l),
-            list([hier] * l),
-            list([resolution] * l),
-        ):
-            distances[:, :, frame_id] = distances_in_frame
-            print(f"Done with frame {frame_id} out of {l} frames")
+    mdl_id = 0
+    for mdl_id, frame in enumerate(tqdm(sample_models)):
+        distances_in_frame = measure_beadwise_distances(
+            p1, p2, s1, s2, rmf_file_handle, frame, mdl, hier, resolution
+        )
 
-    # for mdl_id, frame in enumerate(tqdm(sample_models)):
-    #     # print(f"Processing model {mdl_id} out of {len(sample_models)}")
-    #     distances_in_frame = measure_beadwise_distances(
-    #         p1, p2, s1, s2, rmf_file_handle, frame, mdl, hier, resolution
-    #     )
-
-    # distances[:, :, mdl_id] = distances_in_frame
+    distances[:, :, mdl_id] = distances_in_frame
     mean_distances: np.ndarray = np.mean(distances, axis=2)
     return distances, mean_distances
