@@ -51,12 +51,12 @@ print(f"No. of Contact maps created = {len( prots )}")
 for prot in prots:
     os.system(
         f"~/imp-clean/build/setup_environment.sh \
-		python contact_maps_all_pairs_surface.py \
-		-ia ../cluster.0.sample_A.txt \
-		-ib ../cluster.0.sample_B.txt \
-		-ra ../../model_analysis/A_models_clust1.rmf3 \
-		-rb ../../model_analysis/B_models_clust1.rmf3 \
-		-c ../cluster.0/cluster_center_model.rmf3 \
-		-ta ../../model_analysis/A_models_clust1.txt \
+		python /home/shreyas/Projects/washburn/wdr76_spin1_nucleosome/scripts/analysis/contact_maps_all_pairs_surface.py \
+		-ia ../../cluster.0.sample_A.txt \
+		-ib ../../cluster.0.sample_B.txt \
+		-ra ../../../model_analysis/A_models_clust1.rmf3 \
+		-rb ../../../model_analysis/B_models_clust1.rmf3 \
+		-c ../../cluster.0/cluster_center_model.rmf3 \
+		-ta ../../../model_analysis/A_models_clust1.txt \
 		-p {prot} &"
     )

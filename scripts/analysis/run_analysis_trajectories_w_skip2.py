@@ -14,7 +14,7 @@ import analysis_trajectories
 ########### MAIN ################
 #################################
 
-nproc = 120
+nproc = 124
 top_dir = sys.argv[1]
 dir_head = sys.argv[2]  # How are the trajectories dir names
 out_dirs = glob.glob(top_dir + "/" + dir_head + "*/")
@@ -60,7 +60,7 @@ AT.get_psi_stats()
 
 # What scores do we cluster on?
 AT.hdbscan_clustering(
-    ["EV_sum", "XLs_sum"], skip=3  # , min_samples=50
+    ["EV_sum", "XLs_sum"], skip=2  # , min_samples=50
 )  # , 'GaussianEMRestraint_None'
 AT.summarize_XLs_info()
 # exit()
