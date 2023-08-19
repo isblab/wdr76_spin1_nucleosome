@@ -54,7 +54,7 @@ hier = IMP.rmf.create_hierarchies(rmf_fh, mdl)
 mdl.update()
 
 target_proteins = {"WDR76": 1, "H3": 2}
-target_proteins_selection = {"WDR76": range(286), "H3": range(37)}
+target_proteins_selection = {"WDR76": range(626), "H3": range(140)}
 
 pairs = []
 distances = {}

@@ -31,7 +31,9 @@ with open(
     "/home/shreyas/Projects/washburn/wdr76_spin1_nucleosome/data/xlinks/S4_ncbi_map.yaml",
     "r",
 ) as mapf:
-    mapping = yaml.safe_load(mapf)["mapping_from_sheet5"]
+    loaded_mapping = yaml.safe_load(mapf)
+    mapping = loaded_mapping["mapping_from_sheet5"]
+    filter_mapping = loaded_mapping["proteins_to_use"]
 
 with open(
     "/home/shreyas/Projects/washburn/wdr76_spin1_nucleosome/data/xlinks/xls_p1r1p2r2.csv",
@@ -52,7 +54,9 @@ def xl_filter(xls: list, mapping: dict) -> list[str]:
     for link in xls:
         ln = link.split(",")
         if not ln[0] == "Protein1":
-            if ln[0] in list(mapping.values()) and ln[2] in list(mapping.values()):
+            if ln[0] in list(filter_mapping.values()) and ln[2] in list(
+                filter_mapping.values()
+            ):
                 outl.append(link)
         else:
             outl.append(link)

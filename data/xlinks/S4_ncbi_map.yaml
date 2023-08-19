@@ -7,3 +7,9 @@ mapping_from_sheet5:
   NP_001077430.1: WDR62
   NP_066298.1: H3
   NP_542160.1: H2B
+
+proteins_to_use:
+  NP_079184.2: WDR76
+  NP_778224.1: H4
+  NP_066298.1: H3
+  NP_542160.1: H2B
