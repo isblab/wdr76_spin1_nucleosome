@@ -31,7 +31,7 @@ run_output_dir = "run_" + str(runID)
 
 num_frames = 0
 if runType == "test":
-    num_frames = 2500
+    num_frames = 50
 elif runType == "prod":
     num_frames = 15_000
 
