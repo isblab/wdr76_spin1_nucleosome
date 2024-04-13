@@ -98,6 +98,8 @@ For the simulations, the following files are in the [results](results/) director
 * `cluster_center_model.rmf3` : representative bead model of the major cluster
 * `chimera_densities.py` : to view the localization densities (.mrc files)
 * `xlviol` : Directory containing the logs for crosslink violations
+* `dmaps` : Directory containing the average distance maps computed for all protein pairs
+* `prism_output` : Directory containing the output from PrISM
 
 
 ## Information
