@@ -63,7 +63,7 @@ bs.add_state(t)
 # Add deposition information
 po = IMP.pmi.mmcif.ProtocolOutput()
 bs.system.add_protocol_output(po)
-po.system.title = "Integrative structure of the human NuDe complex"
+po.system.title = "Integrative structure of the human WDR76-SPIN1-Nucleosome complex"
 # po.system.citations.append(ihm.Citation.from_pubmed_id(000000)) #TODO
 
 root_hier, dof = bs.execute_macro(
@@ -271,7 +271,7 @@ for prot, entry in Uniprot.items():
     po.asym_units[prot].entity.references.append(ref)
 
 m = IMP.Model()
-inf1 = RMF.open_rmf_file_read_only("../../results/cluster.0/cluster_center_model.rmf3")
+inf1 = RMF.open_rmf_file_read_only("../../results/cluster_center_model.rmf3")
 h = IMP.rmf.create_hierarchies(inf1, m)[0]
 IMP.rmf.link_hierarchies(inf1, [h])
 IMP.rmf.load_frame(inf1, RMF.FrameID(0))
@@ -279,13 +279,12 @@ m.update()
 
 model = po.add_model(e.model_group)
 
-#! TODO?
-# repo = ihm.location.Repository(
-#     doi="10.5281/zenodo.6674232",
-#     root="../..",
-#     top_directory="nurd_zenodo",
-#     url="https://zenodo.org/record/6674232/files/nurd_zenodo.zip",
-# )
+repo = ihm.location.Repository(
+    doi="10.5281/zenodo.11044599",
+    root="../..",
+    top_directory="wdr76_github",
+    url="https://zenodo.org/record/11044599/files/wdr76_github.zip",
+)
 
 loc_density_list = {
     "WDR76.0": [
@@ -320,12 +319,12 @@ for prot, density in loc_density_list.items():
     asym = po.asym_units[prot]
     for domain_density in density:
         loc = ihm.location.OutputFileLocation(
-            "../../results/cluster.0/" + domain_density + ".mrc"
+            "../../results/" + domain_density + ".mrc"
         )
         den = ihm.model.LocalizationDensity(file=loc, asym_unit=asym)
         e.densities.append(den)
 
-# po.system.update_locations_in_repositories([repo])
+po.system.update_locations_in_repositories([repo])
 po.finalize()
 
 with open("model_wdr76-spin1-nucleosome.cif", "w") as fh:
@@ -335,4 +334,3 @@ import ihm.reader
 
 with open("model_wdr76-spin1-nucleosome.cif") as fh:
     (s,) = ihm.reader.read(fh)
-print(s.title, s.restraints, s.ensembles, s.state_groups)

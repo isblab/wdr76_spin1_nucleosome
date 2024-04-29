@@ -1,7 +1,7 @@
 data_model
 _entry.id model
 _struct.entry_id model
-_struct.title 'Integrative structure of the human NuDe complex'
+_struct.title 'Integrative structure of the human WDR76-SPIN1-Nucleosome complex'
 _audit_conform.dict_location https://raw.githubusercontent.com/ihmwg/IHM-dictionary/b4fe8af/ihm-extension.dic
 _audit_conform.dict_name ihm-extension.dic
 _audit_conform.dict_version 1.09
@@ -3612,7 +3612,7 @@ _ihm_external_files.file_path
 _ihm_external_files.content_type
 _ihm_external_files.file_size_bytes
 _ihm_external_files.details
-1 1 mmcif_modeling.py 'Modeling workflow or script' 9305
+1 1 mmcif_modeling.py 'Modeling workflow or script' 9235
 'The main integrative modeling script'
 2 1 ../../data/xlinks/modeling_xlfile_sheetA.dat 'Input data or restraints' 1140
 Crosslinks
