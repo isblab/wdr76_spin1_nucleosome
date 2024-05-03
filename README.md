@@ -9,7 +9,7 @@ This repository is of the integrative model of the WDR76-SPIN1-Nucleosome comple
 
 These integrative structures will be deposited in the PDB-Dev database with accession codes ***AddPDBdev Ids***
 
-![main_fig](F1.png)
+![Main_fig](F1.png)
 
 
 ## Directory structure
