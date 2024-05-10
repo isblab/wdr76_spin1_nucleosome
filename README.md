@@ -1,7 +1,7 @@
 
 [Add PubMed link]: [![PubMed](https://salilab.org/imp-systems/static/images/pubmed.png)](https://pubmed.ncbi.nlm.nih.gov/36040254/)
 
-[Add Zenodo link]: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6674232.svg)](https://doi.org/10.5281/zenodo.6674232)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6674232.svg)](https://zenodo.org/doi/10.5281/zenodo.11044598)
 
 # Integrative model of the WDR76-SPIN1-Nucleosome complex
 
