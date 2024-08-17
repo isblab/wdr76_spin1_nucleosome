@@ -1,5 +1,5 @@
 
-[Add PubMed link]: [![PubMed](https://salilab.org/imp-systems/static/images/pubmed.png)](https://pubmed.ncbi.nlm.nih.gov/39116123/)
+[![PubMed](https://salilab.org/imp-systems/static/images/pubmed.png)](https://pubmed.ncbi.nlm.nih.gov/39116123/)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11044598.svg)](https://zenodo.org/doi/10.5281/zenodo.11044598)
 
