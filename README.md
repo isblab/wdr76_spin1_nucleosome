@@ -1,5 +1,5 @@
 
-[Add PubMed link]: [![PubMed](https://salilab.org/imp-systems/static/images/pubmed.png)](https://pubmed.ncbi.nlm.nih.gov/36040254/)
+[Add PubMed link]: [![PubMed](https://salilab.org/imp-systems/static/images/pubmed.png)](https://pubmed.ncbi.nlm.nih.gov/39116123/)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11044598.svg)](https://zenodo.org/doi/10.5281/zenodo.11044598)
 
@@ -7,7 +7,7 @@
 
 This repository is of the integrative model of the WDR76-SPIN1-Nucleosome complex based on data from chemical crosslinking, X-ray crystallography, and structure prediction from [Alphafold](https://www.alphafold.ebi.ac.uk/entry/Q9H967). It contains input data, scripts for data preprocessing, modeling and results including bead models and localization probability density maps. The modeling was performed using [IMP](https://integrativemodeling.org) (*Integrative Modeling Platform*).
 
-These integrative structure is deposited in the PDB-Dev database with accession code 9A8I (PDBDEV_00000382)
+The integrative structure is deposited in the PDB with accession code 9A8I (PDB-Dev accession: PDBDEV_00000382)
 
 ![Main_fig](F1.png)
 
@@ -111,5 +111,5 @@ International License.
 **Last known good IMP version:** Not tested  
 **Testable:** Yes  
 **Parallelizeable:** Yes  
-**Publications:** https://doi.org/10.1073/pnas.2318601121
+**Publications:** Liu X, Zhang Y, Wen Z, Hao Y, Banks CAS, Cesare J, Bhattacharya S, Arvindekar S, Lange JJ, Xie Y, Garcia BA, Slaughter BD, Unruh JR, Viswanath S, Florens L, Workman JL, Washburn MP. An integrated structural model of the DNA damage-responsive H3K4me3 binding WDR76:SPIN1 complex with the nucleosome. Proc Natl Acad Sci U S A. 2024 Aug 13;121(33):e2318601121. https://doi.org/10.1073/pnas.2318601121
 
