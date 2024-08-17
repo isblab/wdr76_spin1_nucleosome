@@ -7,7 +7,7 @@
 
 This repository is of the integrative model of the WDR76-SPIN1-Nucleosome complex based on data from chemical crosslinking, X-ray crystallography, and structure prediction from [Alphafold](https://www.alphafold.ebi.ac.uk/entry/Q9H967). It contains input data, scripts for data preprocessing, modeling and results including bead models and localization probability density maps. The modeling was performed using [IMP](https://integrativemodeling.org) (*Integrative Modeling Platform*).
 
-These integrative structures will be deposited in the PDB-Dev database with accession codes ***AddPDBdev Ids***
+These integrative structure is deposited in the PDB-Dev database with accession code 9A8I (PDBDEV_00000382)
 
 ![Main_fig](F1.png)
 
@@ -103,7 +103,7 @@ For the simulations, the following files are in the [results](results/) director
 
 
 ## Information
-**Author(s):** Xingyu Liu, Ying Zhang, Zihui Wen, Yan Hao, Charles Banks, Joseph Cesare, Saikat Bhattacharya, Shreyas Arvindekar, Jeffrey Lange, Brian Slaughter, Jay Unruh, Shruthi Viswanath, Laurence Florens, Jerry Workman, Michael Washburn  
+**Author(s):** Shreyas Arvindekar, Shruthi Viswanath
 **Date**: September 12th, 2023  
 **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
@@ -111,5 +111,5 @@ International License.
 **Last known good IMP version:** Not tested  
 **Testable:** Yes  
 **Parallelizeable:** Yes  
-**Publications:**  
+**Publications:** https://doi.org/10.1073/pnas.2318601121
 
