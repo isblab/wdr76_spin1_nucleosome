@@ -103,8 +103,7 @@ For the simulations, the following files are in the [results](results/) director
 
 
 ## Information
-**Author(s):** Shreyas Arvindekar, Shruthi Viswanath
-**Date**: September 12th, 2023  
+**Author(s):** Shreyas Arvindekar, Shruthi Viswanath 
 **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
 International License.  
